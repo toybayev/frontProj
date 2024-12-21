@@ -68,8 +68,8 @@ const Header = ({ onSearch, cartCount }) => {
                     </button>
                 </div>
 
-                {/* Навигация для десктопа */}
-                <div className="hidden lg:flex items-center justify-between w-full">
+
+                <div className="hidden lg:flex items-center justify-around w-full">
                     <div className="relative cursor-pointer mr-4" onClick={() => navigate('/cart')}>
                         <FaShoppingCart className="text-2xl text-gray-700" />
                         {cartCount > 0 && (
@@ -87,10 +87,10 @@ const Header = ({ onSearch, cartCount }) => {
                             placeholder="Search for course"
                             value={searchText}
                             onChange={(e) => setSearchText(e.target.value)}
-                            className="search-input w-full px-4 py-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-teal-400"
+                            className="search-input w-full px-4 py-2 border mr-4 rounded-l-md focus:outline-none focus:ring-2 focus:ring-teal-400"
                         />
                         <select
-                            className="border rounded-r-md px-3 py-2 text-gray-500 focus:outline-none"
+                            className="border rounded-r-md px-3 py-2 text-gray-500 focus:outline-none mr-4"
                             value={selectedCategory}
                             onChange={(e) => setSelectedCategory(e.target.value)}
                         >
