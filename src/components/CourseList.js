@@ -91,7 +91,12 @@ const CourseList = ({ onSearch }) => {
                 </span>{' '}
                 <span className="line-through text-gray-400">{course.first_price} KZT</span>
               </div>
-              <StarRating rating={course.average_rating} countRatings={course.count_ratings} />
+
+              <StarRating
+                  rating={course.average_rating}
+                  disabled={true} // Включает только отображение
+              />
+
             </div>
           </div>
         ))}
