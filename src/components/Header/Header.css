@@ -1,8 +1,30 @@
+
+@media (max-width: 1026px) {
+
+    .search-input{
+        width: 180px !important;
+        /*margin-right: 0 !important;*/
+    }
+
+    .avatar{
+        width: 40px !important;
+    }
+
+    .search-container{
+        margin-right: 0 !important;
+    }
+}
+
+
+
+
+
 @media (max-width: 777px) {
     .lg\\:hidden {
-        display: none;
+        display: block;
     }
+
     .lg\\:flex {
-        display: flex;
+        display: none;
     }
 }
