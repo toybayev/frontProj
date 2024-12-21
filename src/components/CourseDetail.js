@@ -6,6 +6,7 @@ import { fetchCourseDetail } from '../api/courses';
 import AddChapter from './AddChapter';
 import { addToCart, addToWishlist } from '../api/courses';
 import SuccessPopup from './SuccessPopup';
+import StarRating from "./StarRating";
 
 const CourseDetail = ({ cartCount, setCartCount }) => {
   const { id } = useParams();
@@ -307,17 +308,22 @@ const CourseDetail = ({ cartCount, setCartCount }) => {
           ></textarea>
           <div className="flex items-center mb-2">
             <label className="mr-2">Rating:</label>
-            <select
-              value={reviewRating}
-              onChange={(e) => setReviewRating(Number(e.target.value))}
-              className="border px-2 py-1 rounded"
-            >
-              {[1, 2, 3, 4, 5].map((num) => (
-                <option key={num} value={num}>
-                  {num}
-                </option>
-              ))}
-            </select>
+            {/*<select*/}
+            {/*  value={reviewRating}*/}
+            {/*  onChange={(e) => setReviewRating(Number(e.target.value))}*/}
+            {/*  className="border px-2 py-1 rounded"*/}
+            {/*>*/}
+            {/*  {[1, 2, 3, 4, 5].map((num) => (*/}
+            {/*    <option key={num} value={num}>*/}
+            {/*      {num}*/}
+            {/*    </option>*/}
+            {/*  ))}*/}
+            {/*</select>*/}
+
+            <StarRating
+                rating={reviewRating}
+                onRatingChange={(value) => setReviewRating(Number(value))}
+            />
           </div>
           <button
             type="submit"
